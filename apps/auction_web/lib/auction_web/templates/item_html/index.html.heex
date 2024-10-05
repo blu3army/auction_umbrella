@@ -1,0 +1,34 @@
+<.big_title text="This is my big title" />
+
+<.subtitle />
+
+<.my_button>
+    Ingrese <strong>aquí</strong>
+</.my_button>
+
+<ul class="mt-10 ">
+    <%= for item <- @items do %>
+        <.simple_li item={item} />
+    <% end %>
+
+    <.simple_li />
+</ul>
+
+<hr />
+
+<.my_list :let={item} entries={@items}>
+    Título: <strong><%= item.title %></strong>
+</.my_list>
+
+<.my_modal general_class="p-5 rounded-lg border border-stone-300" class="p-1 text-2xl ">
+    <div class="font-semibold mt-5 ">
+        This is the body, everything is not named is rendered in the default slot
+    </div>
+
+    <:footer>
+        <p class="text-teal-400">
+            This is the footer slot
+        </p>
+    </:footer>
+
+</.my_modal>

@@ -1,0 +1,16 @@
+
+<.link href={~p"/items"} class="font-semibold text-blue-500">
+    Come back
+</.link>
+
+<h1 class="text-4xl font-semibold mt-10">
+    <%= @item.title %>
+</h1>
+<ul class="p-5">
+    <li>
+        <strong>Description: </strong> <%= @item.description %>
+    </li>
+    <li>
+        <strong>Auction ends at: </strong> <%= @item.ends_at %>
+    </li>
+</ul>
